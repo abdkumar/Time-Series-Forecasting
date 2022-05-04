@@ -1,4 +1,4 @@
-# Car Demand Forecasting ( Analytics Vidya Job-A-Thon April 2022)
+# Car Rentals Demand Forecasting ( Analytics Vidhya Job-A-Thon April 2022)
 https://datahack.analyticsvidhya.com/contest/job-a-thon-april-2022/
 
 ## Problem Statement
@@ -13,9 +13,10 @@ The main objective of the problem is to develop the machine learning approach to
 ### Exploratory Data Analysis
   - Training data contains only date, hour & demand columns. We had to create additional features from the given date column.
   - Also, date and hour columns have non continuios data. So, we cannot use regular time series forecasting models like ARIMA, SARIMA etc.,
+  - We can convert the panel data (time series) into normal data which is required for traditional regression models
   - Created month, day, week_of_year, day_of_week, quarter & other time related features from the date column
   - Since, car demand will be high during weekends compared to weekdays, we can create a is_weekend column from day_of_week
-  - Car data is collected in Karnataka state, Using holidays pacakge loaded Karnataka holidays data for the year 2018 - 2022. As car demand will be in peak, during public holidays
+  - Car data is collected in Karnataka state, Using holidays pacakge loaded Karnataka holidays data for the year 2018 to 2022. As car demand will be in peak, during public holidays
   - Distribution of hour v/s demand confirms that hour has varying impact on demand. Grouped hour into categories like Early Morning, Morning, Afternoon etc.,
   - Applied Sine & Cosine transformations on cyclic features like hour of day, day of week & month of year
 
